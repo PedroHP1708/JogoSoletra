@@ -12,7 +12,9 @@ O programa é uma implementação de um jogo de soletração nos moldes dos disp
 3. Função palavrasValidas:
    - Cria uma matriz dinâmica de strings (char***) para armazenar as palavras válidas do arquivo valid_words.txt.
    - Filtra palavras que contêm apenas as letras válidas e monta a matriz por tamanho da palavra.
+   - Foi escolhida a matriz como estrutura de dados principal devido ao fato de ser uma maneira mais visual de de guardar os elementos do que em um vetor: no caso da matriz linhas e colunas têm significado, ao invés de estarem apenas ordenadas como nos vetores. Além disso, a complexidade do trabalho não exigia a implementação de estruturas como pilhas e filas e listas ligadas, por não permitirem indexação, não possibilitariam o uso da busca binária. 
 4. Função busca_binaria:
    - Realiza uma busca binária nos subvetores de palavras válidas, geradas pela função palavrasValidas. Essa função retorna 0 caso a palavra procurada não seja encontrada na lista, 1 caso seja encontrada (nesse caso, marcando 'true' na posição especificada na matriz 'encontradas') e 2 caso a palavra seja digitada novamente (por especificação do trabalho, esse caso não é implementado no programa principal porém a função funciona de maneira mais completa assim).
+   - Foi escolhido o algoritmo de busca binária pelo fato de se tratar de uma matriz ordenada de palavras, que possibilita uma busca otimizada através desse algoritmo, que é de fácil implementação.
 6. Função free_matriz_palavras:
    - Libera a memória alocada para a matriz de palavras para evitar vazamentos de memória.
